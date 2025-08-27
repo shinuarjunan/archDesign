@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArchDesign — Home | Architectural & Interior Design</title>
+  <meta name="description"
+    content="ArchDesign — Architectural, Interior, False Ceiling & Fabrication services. Transforming homes with modern, functional and sustainable designs." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #b8860b;
+      --muted: #6b7280;
+      --dark: #0f1724;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, Arial;
+      color: var(--dark);
+      background: #fbfbfd;
+    }
+
+    /* Stylish Navbar */
+    .custom-navbar {
+      transition: background 0.4s, box-shadow 0.4s;
+      background: transparent;
+      padding: 1rem 0;
+    }
+
+    .custom-navbar.scrolled {
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .custom-navbar .navbar-brand {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .custom-navbar .nav-link {
+      position: relative;
+      color: #fff;
+      font-weight: 500;
+      margin-left: 1rem;
+      transition: color 0.3s;
+    }
+
+    .custom-navbar.scrolled .nav-link {
+      color: var(--dark);
+    }
+
+    .custom-navbar .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .custom-navbar .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .custom-navbar .btn-accent {
+      background: var(--accent);
+      color: #fff !important;
+      border-radius: 25px;
+      padding: 0.5rem 1.2rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 72vh;
+      background: url('false_ceiling.png') center/cover no-repeat;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6, 9, 20, 0.55), rgba(6, 9, 20, 0.3))
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2
+    }
+
+    .service-card {
+      transition: transform .35s, box-shadow .35s;
+      will-change: transform
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 40px rgba(15, 23, 36, .12)
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .project-img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%
+    }
+
+    footer {
+      background: #0b1220;
+      color: #cbd5e1;
+      padding: 28px 0
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0
+    }
+
+  </style>
+
+  <!-- JSON-LD structured data for LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"ArchDesign",
+    "image":"https://images.unsplash.com/photo-1549187774-b4e9f0445f90?auto=format&fit=crop&w=1200&q=80",
+    "@id":"",
+    "url":".",
+    "telephone":"+91-XXXXXXXXXX",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Your Street",
+      "addressLocality":"City Name",
+      "addressRegion":"State",
+      "postalCode":"000000",
+      "addressCountry":"IN"
+    },
+    "openingHours":"Mo,Tu,We,Th,Fr 09:00-18:00",
+    "priceRange":"$$"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">ArchDesign</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <nav class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="architecture.html">Architectural</a></li>
+          <li class="nav-item"><a class="nav-link" href="false_ceiling.html">False Ceiling</a></li>
+          <li class="nav-item"><a class="nav-link" href="fabrication.html">Fabrication</a></li>
+          <li class="nav-item"><a class="btn btn-accent ms-lg-3" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container text-center text-lg-start">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-5 fw-bold reveal">Transforming Spaces with Precision &amp; Style</h1>
+            <p class="lead text-white-75 mt-3 reveal">Architectural design, interior styling, false ceiling solutions
+              and custom fabrication — end-to-end delivery from concept to completion.</p>
+            <div class="mt-4 reveal">
+              <a href="contact.html" class="btn btn-outline-primary btn-lg me-2">Get Free Consultation</a>
+              <a href="architecture.html" class="btn btn-warning btn-lg">View Services</a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <img src="livingroom.png" class="img-fluid rounded shadow-lg reveal"
+              alt="Contemporary interior living room">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-4 reveal">Our Services</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="card p-3 service-card h-100" aria-labelledby="svc-arch">
+              <img src="architecture.png" alt="Architectural design sample" class="w-100 rounded mb-3 project-img"
+                loading="lazy">
+              <h3 id="svc-arch" class="h5">Architectural Design</h3>
+              <p class="text-muted small">Site-responsive, code-ready plans, 3D visualisations and sustainable building
+                strategies.</p>
+              <a href="architecture.html" class="stretched-link text-decoration-none"
+                aria-label="Learn more about Architectural Design"></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="card p-3 service-card h-100" aria-labelledby="svc-int">
+              <img src="Interior.png" alt="Interior design sample" class="w-100 rounded mb-3 project-img"
+                loading="lazy">
+              <h3 id="svc-int" class="h5">Interior Design</h3>
+              <p class="text-muted small">Function-first layouts, material selection, lighting and furniture
+                coordination.</p>
+              <a href="architecture.html#interiors" class="stretched-link"></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="card p-3 service-card h-100" aria-labelledby="svc-ceil">
+              <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80"
+                alt="False ceiling sample" class="w-100 rounded mb-3 project-img" loading="lazy">
+              <h3 id="svc-ceil" class="h5">False Ceiling</h3>
+              <p class="text-muted small">Custom profiles, integrated lighting & acoustic treatments for modern spaces.
+              </p>
+              <a href="false_ceiling.html" class="stretched-link"></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="card p-3 service-card h-100" aria-labelledby="svc-fab">
+              <img src="fabrication.png" alt="Fabrication sample" class="w-100 rounded mb-3 project-img" loading="lazy">
+              <h3 id="svc-fab" class="h5">Fabrication</h3>
+              <p class="text-muted small">Metal & wood bespoke elements — railings, panels, furniture and staircases.
+              </p>
+              <a href="fabrication.html" class="stretched-link"></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h2 class="fw-bold mb-4 reveal">Selected Projects</h2>
+        <div class="row g-3">
+          <div class="col-md-4 reveal">
+            <figure class="card overflow-hidden">
+              <img src="false_ceiling.png" alt="Modern living room project" class="project-img" loading="lazy">
+              <figcaption class="p-3">
+                <strong>Modern Living Room</strong><br><small class="text-muted">Interior + Lighting</small>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4 reveal">
+            <figure class="card overflow-hidden">
+              <img src="architecture_house.png" alt="Contemporary facade" class="project-img" loading="lazy">
+              <figcaption class="p-3"><strong>Contemporary Facade</strong><br><small
+                  class="text-muted">Architecture</small></figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4 reveal">
+            <figure class="card overflow-hidden">
+              <img src="kitchenwork.png" alt="Custom metal panel" class="project-img" loading="lazy">
+              <figcaption class="p-3"><strong>Custom Metal Panel</strong><br><small
+                  class="text-muted">Fabrication</small></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="text-center mt-4 reveal"><a href="architecture.html" class="btn btn-outline-secondary">View Full
+            Portfolio</a></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-4 reveal">What Clients Say</h2>
+        <div class="row g-3">
+          <div class="col-md-4 reveal">
+            <blockquote class="card p-3">
+              <p class="mb-2 text-muted">"Professional team — delivered on time and the quality was outstanding."</p>
+              <footer class="small">— Riya K., Homeowner</footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4 reveal">
+            <blockquote class="card p-3">
+              <p class="mb-2 text-muted">"Their ceiling solutions transformed our office — looks premium and functions
+                great."</p>
+              <footer class="small">— Arun S., Office Manager</footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4 reveal">
+            <blockquote class="card p-3">
+              <p class="mb-2 text-muted">"Fabrication quality is top-notch — the staircase is a centerpiece."</p>
+              <footer class="small">— Meera P., Interior Designer</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>
+        <strong>ArchDesign</strong>
+        <div class="small text-muted">Architectural • Interior • False Ceiling • Fabrication</div>
+      </div>
+      <div class="text-md-end small">
+        <div>Phone: +91 XXXXXXXXXX</div>
+        <div>Email: hello@archdesign.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      document.querySelector('.custom-navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+
+</html>

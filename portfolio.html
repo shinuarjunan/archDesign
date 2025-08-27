@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinu A | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Devicon Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    /* Hero Section */
+    #home {
+      background: linear-gradient(135deg, #007bff, #6610f2);
+      color: white;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Skills */
+    .skill-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-item i {
+      font-size: 60px;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Project Cards */
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Education */
+    .list-group-item {
+      font-size: 1.1rem;
+      background: transparent;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #bbb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Shinu A</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="d-flex align-items-center" style="height:100vh;">
+    <div class="container">
+      <h1>Hi, I'm <span class="text-warning">Shinu A</span></h1>
+      <p>Aspiring Web Developer | JavaScript | Node.js | Bootstrap</p>
+      <a href="#projects" class="btn btn-outline-warning btn-lg shadow">View My Work</a>
+      <!-- <a href="Shinu_resume.pdf" download class="btn btn-outline-light btn-lg shadow ms-3">Download Resume</a> -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <img src="https://via.placeholder.com/400" class="img-fluid rounded shadow" alt="profile">
+        </div>
+        <div class="col-md-7">
+          <h2>About Me</h2>
+          <p>I am a Computer Science Engineer passionate about creating responsive, user-friendly web
+            applications. Skilled in JavaScript, Node.js, Bootstrap, and modern web design practices. I aim
+            to build impactful solutions that enhance user experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5">Skills</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-1  col-6 skill-item">
+          <i class="devicon-html5-plain colored"></i>
+          <p class="mt-2">HTML5</p>
+        </div>
+
+        <div class="col-md-1 ms-4 col-6 skill-item">
+          <i class="devicon-css3-plain colored"></i>
+          <p class="mt-2">CSS3</p>
+        </div>
+
+        <div class="col-md-1 ms-4 col-6 skill-item">
+          <i class="devicon-javascript-plain colored"></i>
+          <p class="mt-2">JavaScript</p>
+        </div>
+
+        <div class="col-md-1 ms-4 col-6 skill-item">
+          <i class="devicon-bootstrap-plain colored"></i>
+          <p class="mt-2">Bootstrap</p>
+        </div>
+
+        <div class="col-md-1 ms-4 col-6 skill-item">
+          <i class="devicon-jquery-plain colored"></i>
+          <p class="mt-2">jQuery</p>
+        </div>
+
+        <div class="col-md-1 ms-4 col-6 skill-item">
+          <i class="devicon-nodejs-plain colored"></i>
+          <p class="mt-2">Node.js</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container text-center">
+      <h2 class="mb-5">Projects</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="card project-card shadow-sm">
+            <div class="card-body">
+              <i class="devicon-nodejs-plain colored" style="font-size: 40px;"></i>
+              <h5 class="card-title mt-3">Mail Web Application</h5>
+              <p class="card-text">A simple mail management system that allows sending and organizing
+                mails efficiently.</p>
+              <!-- <a href="#" class="btn btn-primary">View Project</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card project-card shadow-sm">
+            <div class="card-body">
+              <i class="devicon-bootstrap-plain colored" style="font-size: 40px;"></i>
+              <h5 class="card-title mt-3">Hospital Management System</h5>
+              <p class="card-text">An application designed to manage patients, doctors, and appointments
+                in a hospital environment.</p>
+              <!-- <a href="#" class="btn btn-primary">View Project</a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5">Education</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Bachelor of Engineering - Computer Science & Engineering</li>
+        <li class="list-group-item">Higher Secondary Education</li>
+        <li class="list-group-item">Secondary Education</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container text-center">
+      <h2>Contact Me</h2>
+      <p class="mt-3">📞 +91 7092362196 | 📧 <a href="mailto:shinuarjunan.work@gmail.com">shinuarjunan.work@gmail.com</a></p>
+      <a href="mailto:shinuarjunan.work@gmail.com" class="btn btn-dark btn-lg shadow">Send Email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p class="mb-0">© 2025 Shinu A. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

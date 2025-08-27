@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Resume — SHINU A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --text: #111;
+            --muted: #555;
+            --rule: #ddd;
+            --accent: #000;
+            --maxw: 820px;
+            /* ~A4 inner width */
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background: #fff;
+            font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif
+        }
+
+        .page {
+            max-width: var(--maxw);
+            margin: 24px auto 80px;
+            padding: 28px 36px;
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+        }
+
+        header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 8px
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: .3px
+        }
+
+        .contact {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .contact a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--rule);
+            margin: 16px 0 20px
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 18px 0 8px;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            color: var(--accent)
+        }
+
+        ul {
+            margin: 8px 0 0 20px
+        }
+
+        li {
+            margin: 4px 0
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        .section {
+            break-inside: avoid
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        /* Sticky print bar */
+        .printbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #fff;
+            border-bottom: 1px solid var(--rule);
+            padding: 10px 12px;
+            display: flex;
+            justify-content: center;
+            gap: 10px
+        }
+
+        .btn {
+            border: 1px solid #000;
+            background: #000;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        .btn.secondary {
+            background: #fff;
+            color: #000
+        }
+
+        .btn:active {
+            transform: translateY(1px)
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: #fff
+            }
+
+            .page {
+                border: 0;
+                margin: 0;
+                padding: 0
+            }
+
+            .printbar {
+                display: none !important
+            }
+
+            a[href^="mailto:"],
+            a[href^="tel:"] {
+                text-decoration: none;
+                color: inherit
+            }
+
+            @page {
+                size: A4;
+                margin: 16mm
+            }
+
+            h2 {
+                margin-top: 10px
+            }
+        }
+
+        /* Small screens */
+        @media (max-width:720px) {
+            .page {
+                margin: 0;
+                border: 0;
+                border-radius: 0;
+                padding: 16px
+            }
+
+            header {
+                flex-direction: column;
+                gap: 6px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top action bar (hidden on print) -->
+    <div class="printbar">
+        <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <!-- <button class="btn secondary" onclick="scrollTo(0,0)">⬆️ Back to Top</button> -->
+    </div>
+
+    <main class="page" role="main" aria-label="Resume">
+        <header>
+            <div>
+                <div class="name">SHINU A</div>
+                <div class="contact">
+                     <a href="tel:+917092362196">+91 7092362196</a> &nbsp;|&nbsp;
+                     <a href="mailto:shinuarjunan.work@gmail.com">shinuarjunan.work@gmail.com</a> &nbsp;|&nbsp;
+                     Chennai, India
+                </div>
+            </div>
+        </header>
+        <hr>
+
+        <!-- Career Objective -->
+        <section class="section" aria-labelledby="objective">
+            <h2 id="objective">Career Objective</h2>
+            <p>
+                To secure a position in a reputed organization like Cognizant where I can utilize my communication
+                skills,
+                analytical ability, and dedication to provide excellent non-voice support services. I aim to contribute
+                positively to the team while gaining valuable professional growth and experience in the corporate
+                environment.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" aria-labelledby="skills">
+            <h2 id="skills">Skills</h2>
+            <ul>
+                <li>Typing Speed & Accuracy</li>
+                <li>MS Office / Google Workspace</li>
+                <li>Analytical & Problem Solving Skills</li>
+                <li>Email & Chat Handling</li>
+                <li>Data Entry & Documentation</li>
+                <li>Communication Skills</li>
+                <li>Basic Technical Knowledge</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="section" aria-labelledby="education">
+            <h2 id="education">Education</h2>
+            <ul>
+                <li><strong>B.E(CSE)</strong>, Mar Ephraem College Of Engineering , Anna University — <em>2024</em> — <em>CGPA 7.79</em></li>
+                <li><strong>Higher Secondary (12th)</strong>, Government Higher Secondary School Kattathurai —
+                    <em>2020</em> — <em>62%</em></li>
+                <li><strong>Secondary School (10th)</strong>, Government Higher Secondary School Kattathurai —
+                    <em>2018</em> — <em>62%</em></li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" aria-labelledby="projects">
+            <h2 id="projects">Academic Projects</h2>
+            <ul>
+                <li><strong>Mail Web Application</strong> — Designed and implemented a basic email system with login,
+                    message sending, and inbox functionality.</li>
+                <li><strong>Hospital Management System</strong> — Developed a system to manage patient details,
+                    appointments, and billing efficiently.</li>
+            </ul>
+        </section>
+
+        <!-- Strengths & Languages side by side -->
+        <section class="section two-col" aria-label="Strengths and Languages">
+            <div>
+                <h2>Strengths</h2>
+                <ul>
+                    <li>Team working</li>
+                    <li>Quick Learning</li>
+                    <li>Time Management</li>
+                    <li>Multitasking</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Languages</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Tamil</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Optional footer note
+        <hr>
+        <p class="muted" style="font-size:12px;margin-top:6px">
+            * References available on request.
+        </p> -->
+    </main>
+
+    <script>
+        // No extra JS needed beyond print, but this keeps it extendable.
+        // window.print() is invoked via the button in the sticky bar.
+    </script>
+</body>
+
+</html>
